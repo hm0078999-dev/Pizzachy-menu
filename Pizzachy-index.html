@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzachy | بيتزاتشي</title>
+  <style>
+    /* =========================
+       ألوان وتصميم الموقع
+       لتغيير الألوان عدّل القيم هنا فقط
+    ========================== */
+    :root {
+      --bg: #f4f0f6;
+      --card: #ffffff;
+      --purple: #4d235f;
+      --purple-light: #6d397f;
+      --text: #241b27;
+      --muted: #766b78;
+      --line: #eee5f0;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .hero {
+      padding: 34px 16px 28px;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(135deg, #32143f, var(--purple-light));
+    }
+    .logo { margin: 0; font-size: 42px; font-weight: 800; }
+    .arabic-name { margin: 2px 0 12px; font-size: 21px; }
+    .tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 30px;
+      background: rgba(255,255,255,.14);
+      font-size: 13px;
+    }
+    .delivery { margin-top: 15px; line-height: 1.9; font-size: 14px; }
+    .delivery b { direction: ltr; display: inline-block; }
+
+    .wrap { width: min(920px, 100%); margin: auto; padding: 18px; }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .cat {
+      padding: 14px 8px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 5px 16px rgba(60,25,70,.06);
+      font-weight: 700;
+    }
+    .cat span { display: block; margin-bottom: 5px; font-size: 23px; }
+
+    .menu-section {
+      margin: 20px 0;
+      padding: 16px;
+      background: var(--card);
+      border-radius: 22px;
+      box-shadow: 0 8px 24px rgba(60,25,70,.07);
+      scroll-margin-top: 12px;
+    }
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 3px 4px 12px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 4px;
+    }
+    .section-icon { font-size: 29px; }
+    .section-head h2 { margin: 0; color: var(--purple); font-size: 23px; }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 13px 5px;
+      border-bottom: 1px solid var(--line);
+    }
+    .item:last-child { border-bottom: 0; }
+    .item h3 { margin: 0 0 5px; color: #321b3d; font-size: 16px; }
+    .item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+    .price {
+      flex-shrink: 0;
+      white-space: nowrap;
+      padding: 7px 10px;
+      color: var(--purple);
+      background: #f6eff8;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .footer { padding: 26px 10px 34px; text-align: center; color: var(--muted); font-size: 13px; }
+
+    @media (min-width: 650px) {
+      .categories { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .menu-section { padding: 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1 class="logo">Pizzachy</h1>
+    <div class="arabic-name">بيتزاتشي</div>
+    <div class="tag">منيو أونلاين</div>
+    <div class="delivery">Delivery<br><b>01043239692 &nbsp; • &nbsp; 01043239293</b></div>
+  </header>
+
+  <main class="wrap">
+    <!-- أزرار التنقل بين أقسام المنيو -->
+    <nav class="categories" aria-label="أقسام المنيو">
+      <a class="cat" href="#crepes"><span>🥙</span>الكريبات</a>
+      <a class="cat" href="#burgers"><span>🍔</span>البرجر</a>
+      <a class="cat" href="#pasta"><span>🍝</span>الباستا</a>
+      <a class="cat" href="#sandwiches"><span>🥪</span>سندوتشات</a>
+      <a class="cat" href="#potatoes"><span>🍟</span>البطاطس</a>
+      <a class="cat" href="#sauces"><span>🥫</span>الصوصات</a>
+    </nav>
+
+    <!-- قسم الكريبات: عدّل الاسم أو السعر من السطور التالية -->
+    <section class="menu-section" id="crepes">
+      <div class="section-head"><span class="section-icon">🥙</span><h2>الكريبات</h2></div>
+      <div class="item"><div><h3>كريب بطاطس</h3></div><strong class="price">65 ج</strong></div>
+      <div class="item"><div><h3>كريب هوت دوج</h3></div><strong class="price">95 ج</strong></div>
+      <div class="item"><div><h3>كريب سجق</h3></div><strong class="price">100 ج</strong></div>
+      <div class="item"><div><h3>كريب شاورما لحم</h3></div><strong class="price">130 ج</strong></div>
+      <div class="item"><div><h3>كريب زنجر</h3></div><strong class="price">115 ج</strong></div>
+      <div class="item"><div><h3>كريب شاورما فراخ</h3></div><strong class="price">115 ج</strong></div>
+      <div class="item"><div><h3>كريب شيش طاووق</h3></div><strong class="price">125 ج</strong></div>
+      <div class="item"><div><h3>كريب تشيكن باربيكيو</h3></div><strong class="price">125 ج</strong></div>
+      <div class="item"><div><h3>كريب تشيكن رانش</h3></div><strong class="price">125 ج</strong></div>
+      <div class="item"><div><h3>كريب مكس تشيكن</h3></div><strong class="price">135 ج</strong></div>
+    </section>
+
+    <!-- قسم البرجر -->
+    <section class="menu-section" id="burgers">
+      <div class="section-head"><span class="section-icon">🍔</span><h2>البرجر</h2></div>
+      <div class="item"><div><h3>برجر كلاسيك</h3><p>قطعة برجر لحم + شريحة جبن شيدر + خضار + صوص بيتزاتشي</p></div><strong class="price">105 ج</strong></div>
+      <div class="item"><div><h3>برجر تشيز</h3><p>قطعة برجر لحم + شريحة جبن شيدر + جبنه موتزريلا + خضار + صوص بيتزاتشي</p></div><strong class="price">120 ج</strong></div>
+      <div class="item"><div><h3>برجر مكرمل</h3><p>قطعة برجر لحم + شريحة جبن شيدر + بصل مكرمل + صوص بيتزاتشي</p></div><strong class="price">120 ج</strong></div>
+      <div class="item"><div><h3>برجر مشروم</h3><p>قطعة برجر لحم + شريحة جبن شيدر + مشروم + خضار + صوص بيتزاتشي</p></div><strong class="price">130 ج</strong></div>
+      <div class="item"><div><h3>دبل برجر</h3><p>2 قطعة برجر لحم + شريحة جبن شيدر + خضار + صوص بيتزاتشي</p></div><strong class="price">150 ج</strong></div>
+      <div class="item"><div><h3>برجر بيتزاتشي</h3><p>قطعتين صوابع موتزريلا + قطعة برجر لحم + شريحة جبن شيدر + بصل مكرمل + خضار + صوص بيتزاتشي</p></div><strong class="price">200 ج</strong></div>
+    </section>
+
+    <!-- قسم الباستا -->
+    <section class="menu-section" id="pasta">
+      <div class="section-head"><span class="section-icon">🍝</span><h2>الباستا</h2></div>
+      <div class="item"><div><h3>تشيكن ألفريدو</h3></div><strong class="price">120 ج</strong></div>
+      <div class="item"><div><h3>نجرسكو فراخ</h3></div><strong class="price">150 ج</strong></div>
+      <div class="item"><div><h3>فيوتشيني</h3></div><strong class="price">130 ج</strong></div>
+      <div class="item"><div><h3>ماك اند تشيز</h3></div><strong class="price">150 ج</strong></div>
+      <div class="item"><div><h3>باستا جمبري</h3></div><strong class="price">235 ج</strong></div>
+    </section>
+
+    <!-- قسم السندوتشات -->
+    <section class="menu-section" id="sandwiches">
+      <div class="section-head"><span class="section-icon">🥪</span><h2>سندوتشات</h2></div>
+      <div class="item"><div><h3>كبده</h3></div><strong class="price">35 ج</strong></div>
+      <div class="item"><div><h3>سجق</h3></div><strong class="price">35 ج</strong></div>
+      <div class="item"><div><h3>سوسيس</h3></div><strong class="price">45 ج</strong></div>
+      <div class="item"><div><h3>ستريبس</h3></div><strong class="price">80 ج</strong></div>
+      <div class="item"><div><h3>كفته</h3></div><strong class="price">45 ج</strong></div>
+      <div class="item"><div><h3>شاورما فراخ كايزر</h3></div><strong class="price">50 ج</strong></div>
+      <div class="item"><div><h3>شاورما لحم كايزر</h3></div><strong class="price">55 ج</strong></div>
+    </section>
+
+    <!-- قسم البطاطس -->
+    <section class="menu-section" id="potatoes">
+      <div class="section-head"><span class="section-icon">🍟</span><h2>البطاطس</h2></div>
+      <div class="item"><div><h3>بطاطس</h3></div><strong class="price">30 ج</strong></div>
+      <div class="item"><div><h3>بطاطس كومبو</h3></div><strong class="price">60 ج</strong></div>
+    </section>
+
+    <!-- قسم الصوصات -->
+    <section class="menu-section" id="sauces">
+      <div class="section-head"><span class="section-icon">🥫</span><h2>الصوصات</h2></div>
+      <div class="item"><div><h3>رانش صوص</h3></div><strong class="price">20 ج</strong></div>
+      <div class="item"><div><h3>باربيكيو صوص</h3></div><strong class="price">20 ج</strong></div>
+      <div class="item"><div><h3>سويت شيلي صوص</h3></div><strong class="price">20 ج</strong></div>
+      <div class="item"><div><h3>تكساس صوص</h3></div><strong class="price">20 ج</strong></div>
+      <div class="item"><div><h3>شيدر صوص</h3></div><strong class="price">35 ج</strong></div>
+    </section>
+  </main>
+
+  <footer class="footer">Pizzachy — بيتزاتشي</footer>
+</body>
+</html>
